@@ -3,4 +3,9 @@ Repositório para a disciplina de Projeto de Compiladores da Universidade Federa
 # Trab 1 - Java Compiler
 Para executar: \
 javac *.java \
-java Compilador teste OU java MaquinaPilha teste5
+java Compilador teste OU java MaquinaPilha teste5 \
+# Trab 2 - Bela
+Para executar: \
+javacc Bela.jj \
+javac *.java \
+java Bela Exemplo2.bel \
