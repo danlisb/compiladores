@@ -1,0 +1,73 @@
+PARSER_BEGIN(Bela)
+import java.io.*;
+
+public class Bela {
+
+  public static void main(String args[]) throws ParseException, IOException {
+    Bela analisador = new Bela(new FileInputStream(args[0]));
+    analisador.Bela();
+  }
+}
+PARSER_END(Bela)
+
+SKIP :
+{
+  " "
+| "\t"
+| "\n"
+| "\r"
+}
+
+TOKEN :
+{
+    < MAIN: "main" >
+|   < VAR: "var" >
+|   < APAR: "(" >
+|   < FPAR: ")" >  
+|   < ACHAVES: "{" >
+|   < FCHAVES: "}" >
+|   < PONTOEVIRGULA: ";" >
+|   < IGUAL: "=" >
+
+|   < MAIS: "+" >
+|   < MENOS: "-" >
+|   < MULT: "*" >
+|   < DIV: "/" >
+|   < AND: "&&" >
+|   < OR: "||" >
+|   < MENOR: "<" >
+|   < MAIOR: ">" >
+|   < IGUAL_IGUAL: "==" >
+
+|   < NUM: (["0"-"9"])+ ("." (["0"-"9"])+ )? ("E" ("+" | "-")? (["0"-"9"])+ )? >
+|   < ID: ["a"-"z","A"-"Z"] (["a"-"z","A"-"Z","0"-"9"])* ("_" (["a"-"z","A"-"Z","0"-"9"])+ )? >
+}
+
+void Bela() :
+{ Token t; }
+{
+(
+    < MAIN > { System.out.println("Palavra reservada: main"); }
+|   < VAR > { System.out.println("Palavra reservada: var"); }
+|   < APAR > { System.out.println("Abre parênteses: ("); }
+|   < FPAR > { System.out.println("Fecha parênteses: )"); }
+|   < ACHAVES > { System.out.println("Abre chaves: {"); }
+|   < FCHAVES > { System.out.println("Fecha chaves: }"); }
+|   < PONTOEVIRGULA > { System.out.println("Ponto e vírgula: ;"); }
+|   < IGUAL > { System.out.println("Operador de atribuição: ="); }
+
+|   < MAIS > { System.out.println("Operador: +"); }
+|   < MENOS > { System.out.println("Operador: -"); }
+|   < MULT > { System.out.println("Operador: *"); }
+|   < DIV > { System.out.println("Operador: /"); }
+|   < AND > { System.out.println("Operador: &&"); }
+|   < OR > { System.out.println("Operador: ||"); }
+|   < MENOR > { System.out.println("Operador: <"); }
+|   < MAIOR > { System.out.println("Operador: >"); }
+|   < IGUAL_IGUAL > { System.out.println("Operador: =="); }
+
+|   t = < NUM > { System.out.println("Número: " + t.image); }
+|   t = < ID > { System.out.println("Identificador: " + t.image); }
+)*
+< EOF >
+}

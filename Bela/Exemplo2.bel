@@ -1,0 +1,11 @@
+main () {
+    var int a;
+    var int b;
+    var int resultado;
+
+    a = 5;
+    b = 10;
+
+    resultado = a + b;
+    printLn resultado;
+}
