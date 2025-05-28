@@ -13,39 +13,65 @@ public interface BelaConstants {
   /** RegularExpression Id. */
   int VAR = 6;
   /** RegularExpression Id. */
-  int APAR = 7;
+  int FUN = 7;
   /** RegularExpression Id. */
-  int FPAR = 8;
+  int IF = 8;
   /** RegularExpression Id. */
-  int ACHAVES = 9;
+  int THEN = 9;
   /** RegularExpression Id. */
-  int FCHAVES = 10;
+  int WHILE = 10;
   /** RegularExpression Id. */
-  int PONTOEVIRGULA = 11;
+  int RETURN = 11;
   /** RegularExpression Id. */
-  int IGUAL = 12;
+  int PRINTLN = 12;
   /** RegularExpression Id. */
-  int MAIS = 13;
+  int READINPUT = 13;
   /** RegularExpression Id. */
-  int MENOS = 14;
+  int TRUE = 14;
   /** RegularExpression Id. */
-  int MULT = 15;
+  int FALSE = 15;
   /** RegularExpression Id. */
-  int DIV = 16;
+  int FLOAT = 16;
   /** RegularExpression Id. */
-  int AND = 17;
+  int BOOL = 17;
   /** RegularExpression Id. */
-  int OR = 18;
+  int VOID = 18;
   /** RegularExpression Id. */
-  int MENOR = 19;
+  int APAR = 19;
   /** RegularExpression Id. */
-  int MAIOR = 20;
+  int FPAR = 20;
   /** RegularExpression Id. */
-  int IGUAL_IGUAL = 21;
+  int ACHAVES = 21;
   /** RegularExpression Id. */
-  int NUM = 22;
+  int FCHAVES = 22;
   /** RegularExpression Id. */
-  int ID = 23;
+  int PONTOEVIRGULA = 23;
+  /** RegularExpression Id. */
+  int IGUAL = 24;
+  /** RegularExpression Id. */
+  int VIRGULA = 25;
+  /** RegularExpression Id. */
+  int MAIS = 26;
+  /** RegularExpression Id. */
+  int MENOS = 27;
+  /** RegularExpression Id. */
+  int MULT = 28;
+  /** RegularExpression Id. */
+  int DIV = 29;
+  /** RegularExpression Id. */
+  int AND = 30;
+  /** RegularExpression Id. */
+  int OR = 31;
+  /** RegularExpression Id. */
+  int MENOR = 32;
+  /** RegularExpression Id. */
+  int MAIOR = 33;
+  /** RegularExpression Id. */
+  int IGUAL_IGUAL = 34;
+  /** RegularExpression Id. */
+  int NUM = 35;
+  /** RegularExpression Id. */
+  int ID = 36;
 
   /** Lexical state. */
   int DEFAULT = 0;
@@ -59,12 +85,25 @@ public interface BelaConstants {
     "\"\\r\"",
     "\"main\"",
     "\"var\"",
+    "\"fun\"",
+    "\"if\"",
+    "\"then\"",
+    "\"while\"",
+    "\"return\"",
+    "\"printLn\"",
+    "\"readInput\"",
+    "\"true\"",
+    "\"false\"",
+    "\"float\"",
+    "\"bool\"",
+    "\"void\"",
     "\"(\"",
     "\")\"",
     "\"{\"",
     "\"}\"",
     "\";\"",
     "\"=\"",
+    "\",\"",
     "\"+\"",
     "\"-\"",
     "\"*\"",

@@ -1,0 +1,11 @@
+main() {
+    var bool a = true;
+    var bool b = false;
+    var bool c = true;
+
+    var bool resultado1 = (a && b) || c;
+    var bool resultado2 = (a == b) && (c || false);
+
+    printLn resultado1;
+    printLn resultado2;
+}

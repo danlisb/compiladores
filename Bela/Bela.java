@@ -15,12 +15,25 @@ public class Bela implements BelaConstants {
       switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
       case MAIN:
       case VAR:
+      case FUN:
+      case IF:
+      case THEN:
+      case WHILE:
+      case RETURN:
+      case PRINTLN:
+      case READINPUT:
+      case TRUE:
+      case FALSE:
+      case FLOAT:
+      case BOOL:
+      case VOID:
       case APAR:
       case FPAR:
       case ACHAVES:
       case FCHAVES:
       case PONTOEVIRGULA:
       case IGUAL:
+      case VIRGULA:
       case MAIS:
       case MENOS:
       case MULT:
@@ -48,6 +61,66 @@ System.out.println("Palavra reservada: main");
       case VAR:{
         jj_consume_token(VAR);
 System.out.println("Palavra reservada: var");
+        break;
+        }
+      case FUN:{
+        jj_consume_token(FUN);
+System.out.println("Palavra reservada: fun");
+        break;
+        }
+      case IF:{
+        jj_consume_token(IF);
+System.out.println("Palavra reservada: if");
+        break;
+        }
+      case THEN:{
+        jj_consume_token(THEN);
+System.out.println("Palavra reservada: then");
+        break;
+        }
+      case WHILE:{
+        jj_consume_token(WHILE);
+System.out.println("Palavra reservada: while");
+        break;
+        }
+      case RETURN:{
+        jj_consume_token(RETURN);
+System.out.println("Palavra reservada: return");
+        break;
+        }
+      case PRINTLN:{
+        jj_consume_token(PRINTLN);
+System.out.println("Palavra reservada: printLn");
+        break;
+        }
+      case READINPUT:{
+        jj_consume_token(READINPUT);
+System.out.println("Palavra reservada: readInput");
+        break;
+        }
+      case TRUE:{
+        jj_consume_token(TRUE);
+System.out.println("Valor booleano: true");
+        break;
+        }
+      case FALSE:{
+        jj_consume_token(FALSE);
+System.out.println("Valor booleano: false");
+        break;
+        }
+      case FLOAT:{
+        jj_consume_token(FLOAT);
+System.out.println("Tipo: float");
+        break;
+        }
+      case BOOL:{
+        jj_consume_token(BOOL);
+System.out.println("Tipo: bool");
+        break;
+        }
+      case VOID:{
+        jj_consume_token(VOID);
+System.out.println("Tipo: void");
         break;
         }
       case APAR:{
@@ -78,6 +151,11 @@ System.out.println("Ponto e v\u00edrgula: ;");
       case IGUAL:{
         jj_consume_token(IGUAL);
 System.out.println("Operador de atribui\u00e7\u00e3o: =");
+        break;
+        }
+      case VIRGULA:{
+        jj_consume_token(VIRGULA);
+System.out.println("V\u00edrgula: ,");
         break;
         }
       case MAIS:{
@@ -156,11 +234,16 @@ System.out.println("Identificador: " + t.image);
   static private int jj_gen;
   static final private int[] jj_la1 = new int[2];
   static private int[] jj_la1_0;
+  static private int[] jj_la1_1;
   static {
 	   jj_la1_init_0();
+	   jj_la1_init_1();
 	}
 	private static void jj_la1_init_0() {
-	   jj_la1_0 = new int[] {0xffffe0,0xffffe0,};
+	   jj_la1_0 = new int[] {0xffffffe0,0xffffffe0,};
+	}
+	private static void jj_la1_init_1() {
+	   jj_la1_1 = new int[] {0x1f,0x1f,};
 	}
 
   /** Constructor with InputStream. */
@@ -306,7 +389,7 @@ System.out.println("Identificador: " + t.image);
   /** Generate ParseException. */
   static public ParseException generateParseException() {
 	 jj_expentries.clear();
-	 boolean[] la1tokens = new boolean[24];
+	 boolean[] la1tokens = new boolean[37];
 	 if (jj_kind >= 0) {
 	   la1tokens[jj_kind] = true;
 	   jj_kind = -1;
@@ -317,10 +400,13 @@ System.out.println("Identificador: " + t.image);
 		   if ((jj_la1_0[i] & (1<<j)) != 0) {
 			 la1tokens[j] = true;
 		   }
+		   if ((jj_la1_1[i] & (1<<j)) != 0) {
+			 la1tokens[32+j] = true;
+		   }
 		 }
 	   }
 	 }
-	 for (int i = 0; i < 24; i++) {
+	 for (int i = 0; i < 37; i++) {
 	   if (la1tokens[i]) {
 		 jj_expentry = new int[1];
 		 jj_expentry[0] = i;

@@ -22,13 +22,25 @@ TOKEN :
 {
     < MAIN: "main" >
 |   < VAR: "var" >
+|   < FUN: "fun" >
+|   < IF: "if" >
+|   < THEN: "then" >
+|   < WHILE: "while" >
+|   < RETURN: "return" >
+|   < PRINTLN: "printLn" >
+|   < READINPUT: "readInput" >
+|   < TRUE: "true" >
+|   < FALSE: "false" >
+|   < FLOAT: "float" >
+|   < BOOL: "bool" >
+|   < VOID: "void" >
 |   < APAR: "(" >
 |   < FPAR: ")" >  
 |   < ACHAVES: "{" >
 |   < FCHAVES: "}" >
 |   < PONTOEVIRGULA: ";" >
 |   < IGUAL: "=" >
-
+|   < VIRGULA: "," >
 |   < MAIS: "+" >
 |   < MENOS: "-" >
 |   < MULT: "*" >
@@ -38,7 +50,6 @@ TOKEN :
 |   < MENOR: "<" >
 |   < MAIOR: ">" >
 |   < IGUAL_IGUAL: "==" >
-
 |   < NUM: (["0"-"9"])+ ("." (["0"-"9"])+ )? ("E" ("+" | "-")? (["0"-"9"])+ )? >
 |   < ID: ["a"-"z","A"-"Z"] (["a"-"z","A"-"Z","0"-"9"])* ("_" (["a"-"z","A"-"Z","0"-"9"])+ )? >
 }
@@ -49,13 +60,25 @@ void Bela() :
 (
     < MAIN > { System.out.println("Palavra reservada: main"); }
 |   < VAR > { System.out.println("Palavra reservada: var"); }
+|   < FUN > { System.out.println("Palavra reservada: fun"); }
+|   < IF > { System.out.println("Palavra reservada: if"); }
+|   < THEN > { System.out.println("Palavra reservada: then"); }
+|   < WHILE > { System.out.println("Palavra reservada: while"); }
+|   < RETURN > { System.out.println("Palavra reservada: return"); }
+|   < PRINTLN > { System.out.println("Palavra reservada: printLn"); }
+|   < READINPUT > { System.out.println("Palavra reservada: readInput"); }
+|   < TRUE > { System.out.println("Valor booleano: true"); }
+|   < FALSE > { System.out.println("Valor booleano: false"); }
+|   < FLOAT > { System.out.println("Tipo: float"); }
+|   < BOOL > { System.out.println("Tipo: bool"); }
+|   < VOID > { System.out.println("Tipo: void"); }
 |   < APAR > { System.out.println("Abre parênteses: ("); }
 |   < FPAR > { System.out.println("Fecha parênteses: )"); }
 |   < ACHAVES > { System.out.println("Abre chaves: {"); }
 |   < FCHAVES > { System.out.println("Fecha chaves: }"); }
 |   < PONTOEVIRGULA > { System.out.println("Ponto e vírgula: ;"); }
 |   < IGUAL > { System.out.println("Operador de atribuição: ="); }
-
+|   < VIRGULA > { System.out.println("Vírgula: ,"); }
 |   < MAIS > { System.out.println("Operador: +"); }
 |   < MENOS > { System.out.println("Operador: -"); }
 |   < MULT > { System.out.println("Operador: *"); }
@@ -65,7 +88,6 @@ void Bela() :
 |   < MENOR > { System.out.println("Operador: <"); }
 |   < MAIOR > { System.out.println("Operador: >"); }
 |   < IGUAL_IGUAL > { System.out.println("Operador: =="); }
-
 |   t = < NUM > { System.out.println("Número: " + t.image); }
 |   t = < ID > { System.out.println("Identificador: " + t.image); }
 )*
