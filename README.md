@@ -9,3 +9,8 @@ Para executar: \
 javacc Bela.jj \
 javac *.java \
 java Bela Exemplo2.bel 
+# Trab 3 - Bela 2
+Para executar: \
+javacc Bela.jj \
+javac *.java \
+java Bela ExemploParser1.bel 
