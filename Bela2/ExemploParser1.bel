@@ -1,0 +1,12 @@
+main() {
+  var float x;
+  var bool flag;
+  x = 10.5;
+  printLn x;
+}
+
+fun float soma(float a, float b) {
+  var float resultado;
+  resultado = (a + b);
+  return resultado;
+}

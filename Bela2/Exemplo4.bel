@@ -1,0 +1,11 @@
+main() {
+    var int contador = 0;
+    while (true) {
+        contador = contador + 1;
+        printLn contador;
+
+        if (contador == 5) then {
+            break;  // Sai do loop
+        }
+    }
+}

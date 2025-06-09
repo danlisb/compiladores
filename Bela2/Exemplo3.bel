@@ -1,0 +1,14 @@
+main () {
+    var float base;
+    var float altura;
+    var float area;
+
+    base = 3.0;
+    altura = 4.0;
+    
+    area = (base * altura) / 2.0E0;
+
+    printLn base;
+    printLn altura;
+    printLn area;
+}
