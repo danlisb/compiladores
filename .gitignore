@@ -1,0 +1,34 @@
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# virtual   
+JavaCompiler/AnaliseLexica.class
+JavaCompiler/ArvoreSintatica.class
+JavaCompiler/CodeGen.class
+JavaCompiler/Compilador.class
+JavaCompiler/Div.class
+JavaCompiler/Exp.class
+JavaCompiler/MaquinaPilha.class
+JavaCompiler/Mult.class
+JavaCompiler/Num.class
+JavaCompiler/Operador.class
+JavaCompiler/Parser$1.class
+JavaCompiler/Parser.class
+JavaCompiler/Soma.class
+JavaCompiler/Sub.class
+JavaCompiler/Token.class
+JavaCompiler/TokenType.class
