@@ -5,7 +5,7 @@ main() {
         printLn contador;
 
         if (contador == 5) then {
-            break;  // Sai do loop
+            break;
         }
     }
 }

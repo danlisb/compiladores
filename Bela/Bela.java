@@ -19,6 +19,7 @@ public class Bela implements BelaConstants {
       case IF:
       case THEN:
       case WHILE:
+      case BREAK:
       case RETURN:
       case PRINTLN:
       case READINPUT:
@@ -81,6 +82,11 @@ System.out.println("Palavra reservada: then");
       case WHILE:{
         jj_consume_token(WHILE);
 System.out.println("Palavra reservada: while");
+        break;
+        }
+      case BREAK:{
+        jj_consume_token(BREAK);
+System.out.println("Palavra reservada: break");
         break;
         }
       case RETURN:{
@@ -243,7 +249,7 @@ System.out.println("Identificador: " + t.image);
 	   jj_la1_0 = new int[] {0xffffffe0,0xffffffe0,};
 	}
 	private static void jj_la1_init_1() {
-	   jj_la1_1 = new int[] {0x1f,0x1f,};
+	   jj_la1_1 = new int[] {0x3f,0x3f,};
 	}
 
   /** Constructor with InputStream. */
@@ -389,7 +395,7 @@ System.out.println("Identificador: " + t.image);
   /** Generate ParseException. */
   static public ParseException generateParseException() {
 	 jj_expentries.clear();
-	 boolean[] la1tokens = new boolean[37];
+	 boolean[] la1tokens = new boolean[38];
 	 if (jj_kind >= 0) {
 	   la1tokens[jj_kind] = true;
 	   jj_kind = -1;
@@ -406,7 +412,7 @@ System.out.println("Identificador: " + t.image);
 		 }
 	   }
 	 }
-	 for (int i = 0; i < 37; i++) {
+	 for (int i = 0; i < 38; i++) {
 	   if (la1tokens[i]) {
 		 jj_expentry = new int[1];
 		 jj_expentry[0] = i;

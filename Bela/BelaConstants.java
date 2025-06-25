@@ -21,57 +21,59 @@ public interface BelaConstants {
   /** RegularExpression Id. */
   int WHILE = 10;
   /** RegularExpression Id. */
-  int RETURN = 11;
+  int BREAK = 11;
   /** RegularExpression Id. */
-  int PRINTLN = 12;
+  int RETURN = 12;
   /** RegularExpression Id. */
-  int READINPUT = 13;
+  int PRINTLN = 13;
   /** RegularExpression Id. */
-  int TRUE = 14;
+  int READINPUT = 14;
   /** RegularExpression Id. */
-  int FALSE = 15;
+  int TRUE = 15;
   /** RegularExpression Id. */
-  int FLOAT = 16;
+  int FALSE = 16;
   /** RegularExpression Id. */
-  int BOOL = 17;
+  int FLOAT = 17;
   /** RegularExpression Id. */
-  int VOID = 18;
+  int BOOL = 18;
   /** RegularExpression Id. */
-  int APAR = 19;
+  int VOID = 19;
   /** RegularExpression Id. */
-  int FPAR = 20;
+  int APAR = 20;
   /** RegularExpression Id. */
-  int ACHAVES = 21;
+  int FPAR = 21;
   /** RegularExpression Id. */
-  int FCHAVES = 22;
+  int ACHAVES = 22;
   /** RegularExpression Id. */
-  int PONTOEVIRGULA = 23;
+  int FCHAVES = 23;
   /** RegularExpression Id. */
-  int IGUAL = 24;
+  int PONTOEVIRGULA = 24;
   /** RegularExpression Id. */
-  int VIRGULA = 25;
+  int IGUAL = 25;
   /** RegularExpression Id. */
-  int MAIS = 26;
+  int VIRGULA = 26;
   /** RegularExpression Id. */
-  int MENOS = 27;
+  int MAIS = 27;
   /** RegularExpression Id. */
-  int MULT = 28;
+  int MENOS = 28;
   /** RegularExpression Id. */
-  int DIV = 29;
+  int MULT = 29;
   /** RegularExpression Id. */
-  int AND = 30;
+  int DIV = 30;
   /** RegularExpression Id. */
-  int OR = 31;
+  int AND = 31;
   /** RegularExpression Id. */
-  int MENOR = 32;
+  int OR = 32;
   /** RegularExpression Id. */
-  int MAIOR = 33;
+  int MENOR = 33;
   /** RegularExpression Id. */
-  int IGUAL_IGUAL = 34;
+  int MAIOR = 34;
   /** RegularExpression Id. */
-  int NUM = 35;
+  int IGUAL_IGUAL = 35;
   /** RegularExpression Id. */
-  int ID = 36;
+  int NUM = 36;
+  /** RegularExpression Id. */
+  int ID = 37;
 
   /** Lexical state. */
   int DEFAULT = 0;
@@ -89,6 +91,7 @@ public interface BelaConstants {
     "\"if\"",
     "\"then\"",
     "\"while\"",
+    "\"break\"",
     "\"return\"",
     "\"printLn\"",
     "\"readInput\"",

@@ -26,6 +26,7 @@ TOKEN :
 |   < IF: "if" >
 |   < THEN: "then" >
 |   < WHILE: "while" >
+|   < BREAK: "break" >
 |   < RETURN: "return" >
 |   < PRINTLN: "printLn" >
 |   < READINPUT: "readInput" >
@@ -64,6 +65,7 @@ void Bela() :
 |   < IF > { System.out.println("Palavra reservada: if"); }
 |   < THEN > { System.out.println("Palavra reservada: then"); }
 |   < WHILE > { System.out.println("Palavra reservada: while"); }
+|   < BREAK > { System.out.println("Palavra reservada: break"); }
 |   < RETURN > { System.out.println("Palavra reservada: return"); }
 |   < PRINTLN > { System.out.println("Palavra reservada: printLn"); }
 |   < READINPUT > { System.out.println("Palavra reservada: readInput"); }

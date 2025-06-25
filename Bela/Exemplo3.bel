@@ -6,7 +6,7 @@ main () {
     base = 3.0;
     altura = 4.0;
     
-    area = (base * altura) / 2.0E0;
+    area = (base * altura) / 2.0;
 
     printLn base;
     printLn altura;
