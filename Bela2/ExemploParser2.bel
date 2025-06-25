@@ -1,25 +1,17 @@
-fun bool ehPar(int num) {
-    return num % 2 == 0;
-}
-
-fun bool ehPrimo(int n) {
-    var bool primo = true;
-    var int i = 2;
-    while (i < n && primo) {
-        if (n % i == 0) then {
-            primo = false;
-        }
-        i = i + 1;
-    }
-    return primo;
-}
-
 main() {
-    var int numero = 7;
-    var bool par = ehPar(numero);
-    var bool primo = ehPrimo(numero);
+    var float a;
+    var float b;
+    var float soma;
+    var bool iguais;
 
-    if (par || primo) then {
-        printLn "O número é par ou primo!";
-    }
+    a = 5;
+    b = 5;
+    soma = (a + b);
+    iguais = (a == b);
+
+    if iguais then {
+        printLn true;
+    } else {
+        printLn false;
+    };
 }
