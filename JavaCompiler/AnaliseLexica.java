@@ -26,7 +26,7 @@ class AnaliseLexica {
         char currchar;
         int currchar1;
 
-        // Ignora espaços, tabs, quebras de linha e retornos de carro
+        // Ignora espaços, tabs, quebras de linha e retornos
         do {
             currchar1 = arquivo.read();
             if (currchar1 == eof) {

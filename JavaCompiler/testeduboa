@@ -1,0 +1,10 @@
+PUSH 20
+PUSH 10
+MULT         
+PUSH 10
+PUSH 10
+MULT         
+SUM         
+PUSH 20
+DIV   
+PRINT
